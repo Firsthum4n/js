@@ -1,4 +1,60 @@
-alert('hi');
+document.getElementById('main-form').addEventListener('submit');
+
+
+function checkForm(event) {
+    event.preventDefault();
+    var el = document.getElementById('main-form');
+
+    var name = el.name.value;
+    var pass = el.pass.value;
+    var repass = el.repass.value;
+    var state = el.state.value;
+
+    var fail = "";
+
+    if(name == "" || pass == "" || state == ""){
+        fail = "zapolnite vse polya";
+    } else if(name.lenght <= 1 || name.lenght >= 50){
+        fail = "Vvedite correcktnoe imya";
+    } else if(pass != repass) {
+        fail = "paroli dolzni sovpadat";
+    } else if(pass.split("&").lenght > 1)
+        fail = "nekkoretniy parrol";
+
+    if(fail !=""){
+        document.getElementById("error").innerHTML = fail
+        return false;
+    }else {
+        alert("все данные корректно заполнены")
+    }
+}
+// <!DOCTYPE html>
+// <html>
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <meta http-equiv="X-UA-Compatible" content="ie=edge"
+//     <title>Java script</title>
+// </head>
+// <body>
+//     <form id="main-form" onsubmit="return checkForm(this)">
+//         <label for="name">Имя:</label>
+//         <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+//         <label for="pass">Пароль:</label>
+//         <input type="password" name="pass" placeholder="Пароль" id="pass"><br><br>
+//         <label for="repass">Проверка пароля:</label>
+//         <input type="password" name="repass" placeholder="Проверка пароля" id="repass"><br><br>
+//         <span>Пол:</span>
+//         <input type="radio" name="state" id="male" value="Мужской">
+//         <label for="male">Мужской</label>
+//         <input type="radio" name="state" id="female" value="Женский">
+//         <label for="female">Женский</label><br><br>
+//         <div id="error" style="color: red"></div>
+//         <input type="submit" name="submit" value="Готово">
+//   </form>
+//     <script src="js/main.js"></script>
+// </body>
+// </html>
 
 
 
@@ -13,6 +69,93 @@ alert('hi');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// var text = document.getElementById('text');
+// text.title = 'new text';
+// console.log(text.title);
+
+// text.style.color = 'red;'
+// text.style.backgroundColor = 'blue'
+
+// text.innerHTML = "New<br>string"
+
+// var spans = document.getElementsByTagName('span')
+
+// for (var i = 0; i < spans.length; i++) {
+//     console.log(spans[i].innerHTML)
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var counter = 0;
+
+// function onClickButton(el) {
+//     counter++;
+//     el.innerHTML = 'click' + counter
+//     el.style.cssText = 'color: red'
+
+//     console.log(el.name)
+// }
+
+// function onInput(el) {
+//     if(el.value == 'hello') {
+//         alert('HI')
+//     }
+//     console.log(el.value)
+// }
+
+
+
+// function summa(arr) {
+//     var sum = 0;
+
+//     for(var i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+//     return sum;
+// }
+
+// var array = [6, 8, 1];
+// var res = summa(array);
+// console.log(res)
+
+
+
+
+// function info(word) {
+//     console.log(word +'!');
+// }
+// function sum(a, b){
+//     var res = a + b;
+//     info(res)
+// }
+// sum(5, 7)
+
+// alert('hi');
 
 
 // var arr = [5, 7, 3, 8, 9, 'stroka'];
