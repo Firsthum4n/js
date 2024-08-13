@@ -1,40 +1,18 @@
-class Person {
-    constructor(name, age, happieness){
-        this.name = name;
-        this.age = age;
-        this.happieness = happieness;
-    }
+// class Person {
+//     constructor(name, age, happieness){
+//         this.name = name;
+//         this.age = age;
+//         this.happieness = happieness;
+//     }
 
-    info() {
-        console.log("Человек: " + this.name);
-    }
-}
+//     info() {
+//         console.log("Человек: " + this.name);
+//     }
+// }
 
-var alex = new Person('Alex', 45, true);
-var bob = new Person('Bob', 25, false)
-alex.info()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// var alex = new Person('Alex', 45, true);
+// var bob = new Person('Bob', 25, false)
+// alex.info()
 
 
 
