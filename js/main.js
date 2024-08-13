@@ -1,33 +1,140 @@
-document.getElementById('main-form').addEventListener('submit');
+class Person {
+    constructor(name, age, happieness){
+        this.name = name;
+        this.age = age;
+        this.happieness = happieness;
+    }
 
-
-function checkForm(event) {
-    event.preventDefault();
-    var el = document.getElementById('main-form');
-
-    var name = el.name.value;
-    var pass = el.pass.value;
-    var repass = el.repass.value;
-    var state = el.state.value;
-
-    var fail = "";
-
-    if(name == "" || pass == "" || state == ""){
-        fail = "zapolnite vse polya";
-    } else if(name.lenght <= 1 || name.lenght >= 50){
-        fail = "Vvedite correcktnoe imya";
-    } else if(pass != repass) {
-        fail = "paroli dolzni sovpadat";
-    } else if(pass.split("&").lenght > 1)
-        fail = "nekkoretniy parrol";
-
-    if(fail !=""){
-        document.getElementById("error").innerHTML = fail
-        return false;
-    }else {
-        alert("все данные корректно заполнены")
+    info() {
+        console.log("Человек: " + this.name);
     }
 }
+
+var alex = new Person('Alex', 45, true);
+var bob = new Person('Bob', 25, false)
+alex.info()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var date = new Date();
+
+// console.log(date.getFullYear())
+// console.log(date.getMonth())
+// console.log(date.getDate())
+// console.log(date.getHours())
+// console.log(date.getMinutes())
+// console.log(date.getSeconds())
+
+// var arr = [8, 90, 23, 5, 7, 8, 9];
+// var stroka = arr.reverse().join(', ');
+
+// console.log(stroka.split(', '));
+
+// console.log(arr.join(', '));
+// console.log(arr.sort());
+// console.log(arr.reverse());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// setTimeout(function(){
+//     console.log('timer is working')
+// }, 2000)
+
+// var count = 0;
+// var id = setInterval(func, 1000);
+// function func (){
+//     count ++
+//     console.log(count)
+//     if( count == 3){
+//         clearInterval(id)
+//     }
+// }
+
+// setInterval(function(){
+//     count++;
+//     console.log('sec: ' + count)
+
+// }, 1000);
+
+
+
+
+
+
+// document.getElementById('main-form').addEventListener('submit');
+// function checkForm(event) {
+//     event.preventDefault();
+//     var el = document.getElementById('main-form');
+
+//     var name = el.name.value;
+//     var pass = el.pass.value;
+//     var repass = el.repass.value;
+//     var state = el.state.value;
+
+//     var fail = "";
+
+//     if(name == "" || pass == "" || state == ""){
+//         fail = "zapolnite vse polya";
+//     } else if(name.lenght <= 1 || name.lenght >= 50){
+//         fail = "Vvedite correcktnoe imya";
+//     } else if(pass != repass) {
+//         fail = "paroli dolzni sovpadat";
+//     } else if(pass.split("&").lenght > 1)
+//         fail = "nekkoretniy parrol";
+
+//     if(fail !=""){
+//         document.getElementById("error").innerHTML = fail
+//         return false;
+//     }else {
+//         alert("все данные корректно заполнены")
+//     }
+// }
 // <!DOCTYPE html>
 // <html>
 // <head>
